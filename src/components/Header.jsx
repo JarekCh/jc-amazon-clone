@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styles/header.css';
+import { FaSearch } from 'react-icons/fa';
+import { BsCart2 } from 'react-icons/bs';
 
 const Header = () => {
   return (
@@ -10,7 +12,7 @@ const Header = () => {
       />
       <div className='header__search'>
         <input className='header__searchInput' type='text' />
-        {/* Logo */}
+        <FaSearch className='header__searchIcon' />
       </div>
       <div className='header__nav'>
         <div className='header__option'>
@@ -21,9 +23,14 @@ const Header = () => {
           <span className='header__optionLineOne'>Return</span>
           <span className='header__optionLineTwo'>& Orders</span>
         </div>
-        <span className='header__optionLineOne'>Your</span>
-        <span className='header__optionLineTwo'>Prime</span>
-        <div className='header__option'></div>
+        <div className='header__option'>
+          <span className='header__optionLineOne'>Your</span>
+          <span className='header__optionLineTwo'>Prime</span>
+        </div>
+      </div>
+      <div className='header__optionBasket'>
+        <span className='header__optionLineOne header__basketCount'>0</span>
+        <BsCart2 />
       </div>
     </div>
   );
