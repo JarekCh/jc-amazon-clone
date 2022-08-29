@@ -12,7 +12,9 @@ const Header = () => {
       />
       <div className='header__search'>
         <input className='header__searchInput' type='text' />
-        <FaSearch className='header__searchIcon' />
+        <div className='header__searchIcon'>
+          <FaSearch />
+        </div>
       </div>
       <div className='header__nav'>
         <div className='header__option'>
