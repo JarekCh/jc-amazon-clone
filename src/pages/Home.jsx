@@ -12,15 +12,78 @@ const Home = () => {
           alt=''
         />
         <div className='home__row'>
-          <Product />
-          {/* product */}
+          <Product
+            id='12354367'
+            title={
+              'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid error blanditiis molestiae cupiditate ad unde ab facere ipsa illum tempore!'
+            }
+            price={29.99}
+            image={
+              'https://m.media-amazon.com/images/I/51CTIr1bJxL._AC_SY1000_.jpg'
+            }
+            rating={5}
+          />
+
+          <Product
+            id='12354307'
+            title={
+              'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid error blanditiis molestiae cupiditate ad unde ab facere ipsa illum tempore!'
+            }
+            price={29.99}
+            image={
+              'https://m.media-amazon.com/images/I/51CTIr1bJxL._AC_SY1000_.jpg'
+            }
+            rating={3}
+          />
         </div>
         <div className='home__row'>
-          {/* product */}
-          {/* product */}
-          {/* product */}
+          <Product
+            id='12354307'
+            title={
+              'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid error blanditiis molestiae cupiditate ad unde ab facere ipsa illum tempore!'
+            }
+            price={29.99}
+            image={
+              'https://m.media-amazon.com/images/I/51CTIr1bJxL._AC_SY1000_.jpg'
+            }
+            rating={3}
+          />
+          <Product
+            id='12354307'
+            title={
+              'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid error blanditiis molestiae cupiditate ad unde ab facere ipsa illum tempore!'
+            }
+            price={29.99}
+            image={
+              'https://m.media-amazon.com/images/I/51CTIr1bJxL._AC_SY1000_.jpg'
+            }
+            rating={3}
+          />
+          <Product
+            id='12354307'
+            title={
+              'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid error blanditiis molestiae cupiditate ad unde ab facere ipsa illum tempore!'
+            }
+            price={29.99}
+            image={
+              'https://m.media-amazon.com/images/I/51CTIr1bJxL._AC_SY1000_.jpg'
+            }
+            rating={3}
+          />
         </div>
-        <div className='home__row'>{/* product */}</div>
+        <div className='home__row'>
+          <Product
+            id='12354307'
+            title={
+              'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid error blanditiis molestiae cupiditate ad unde ab facere ipsa illum tempore!'
+            }
+            price={29.99}
+            image={
+              'https://m.media-amazon.com/images/I/51CTIr1bJxL._AC_SY1000_.jpg'
+            }
+            rating={3}
+          />
+        </div>
       </div>
     </div>
   );
