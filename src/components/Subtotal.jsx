@@ -1,8 +1,10 @@
 import React from 'react';
 import '../styles/subtotal.css';
 import CurrencyFormat from 'react-currency-format';
+import { useGlobalContext } from '../StateProvider';
 
 const Subtotal = () => {
+  const [{ cart }, dispatch] = useGlobalContext();
   return (
     <div className='subtotal'>
       <CurrencyFormat
@@ -10,7 +12,7 @@ const Subtotal = () => {
           <>
             <p>
               {/* home work */}
-              Subtotal (0 items): <strong>0</strong>
+              Subtotal ({cart.length} items): <strong>0</strong>
             </p>
             <small className='subtotal__gift'>
               <input type='checkbox' /> This order contains a gift

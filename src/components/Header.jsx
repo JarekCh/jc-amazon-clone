@@ -3,8 +3,11 @@ import '../styles/header.css';
 import { FaSearch } from 'react-icons/fa';
 import { BsCart2 } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import { useGlobalContext } from '../StateProvider';
 
 const Header = () => {
+  const [{ cart }, dispatch] = useGlobalContext();
+  console.log('🚀 ~ file: Header.jsx ~ line 10 ~ Header ~ state', cart);
   return (
     <div className='header'>
       <Link to='/'>
@@ -35,7 +38,9 @@ const Header = () => {
       </div>
       <Link to='/checkout'>
         <div className='header__optionBasket'>
-          <span className='header__optionLineOne header__basketCount'>0</span>
+          <span className='header__optionLineOne header__basketCount'>
+            {cart?.length}
+          </span>
           <BsCart2 />
         </div>
       </Link>

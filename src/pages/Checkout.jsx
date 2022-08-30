@@ -2,6 +2,8 @@ import React from 'react';
 import Subtotal from '../components/Subtotal';
 import '../styles/checkout.css';
 
+// TODO refactor context for adding quantity
+
 const Checkout = () => {
   return (
     <div className='checkout'>
