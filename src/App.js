@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './components/Header';
 import Home from './pages/Home';
-import Basket from './pages/Basket';
+import Checkout from './pages/Checkout';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/checkout' element={<Basket />} />
+          <Route path='/checkout' element={<Checkout />} />
         </Routes>
       </div>
     </Router>
