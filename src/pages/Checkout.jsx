@@ -1,11 +1,13 @@
 import React from 'react';
 import CartItem from '../components/CartItem';
 import Subtotal from '../components/Subtotal';
+import { useGlobalContext } from '../StateProvider';
 import '../styles/checkout.css';
 
 // TODO refactor context for adding quantity
 
 const Checkout = () => {
+  const [{ cart }, dispatch] = useGlobalContext();
   return (
     <div className='checkout'>
       <div className='checkout__left'>
@@ -16,11 +18,10 @@ const Checkout = () => {
         />
         <div>
           <h2 className='checkout__title'>Your shopping cart</h2>
+          {cart.map((item) => {
+            return <CartItem key={item.id} {...item} />;
+          })}
         </div>
-        <CartItem />
-        <CartItem />
-        <CartItem />
-        <CartItem />
       </div>
       <div className='checkout__right'>
         <Subtotal />
