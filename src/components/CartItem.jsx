@@ -1,7 +1,18 @@
 import React from 'react';
+import { useGlobalContext } from '../StateProvider';
 import '../styles/cartItem.css';
 
+// TODO: add hover on buttons
+
 const CartItem = ({ id, image, title, price, rating }) => {
+  const [{ cart }, dispatch] = useGlobalContext();
+  const removeFromCart = () => {
+    dispatch({
+      type: 'REMOVE_FROM_CART',
+      id: id,
+    });
+  };
+
   return (
     <div className='cartItem'>
       <img className='cartItem__image' src={image} alt='product' />
@@ -19,7 +30,7 @@ const CartItem = ({ id, image, title, price, rating }) => {
               ))}
           </p>
         </p>
-        <button>Remove from cart</button>
+        <button onClick={removeFromCart}>Remove from cart</button>
       </div>
     </div>
   );
