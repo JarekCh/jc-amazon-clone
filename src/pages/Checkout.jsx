@@ -5,6 +5,7 @@ import { useGlobalContext } from '../StateProvider';
 import '../styles/checkout.css';
 
 // TODO refactor context for adding quantity
+// TODO add hr or css linie between products
 
 const Checkout = () => {
   const [{ cart }, dispatch] = useGlobalContext();
