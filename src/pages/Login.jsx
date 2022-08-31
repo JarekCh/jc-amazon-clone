@@ -1,10 +1,13 @@
+import userEvent from '@testing-library/user-event';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { auth } from '../firebase';
 import '../styles/login.css';
 
 // TODO: add hover
 
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -13,7 +16,18 @@ const Login = () => {
   };
 
   const register = (e) => {
-    e.preventdefault();
+    e.preventDefault();
+
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((auth) => {
+        console.log(auth);
+
+        if (auth) {
+          navigate('/');
+        }
+      })
+      .catch((error) => alert(error.message));
   };
 
   return (
