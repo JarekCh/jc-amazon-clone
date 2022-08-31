@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/login.css';
 
+// TODO: add hover
+
 const Login = () => {
   return (
     <div className='login'>
@@ -12,7 +14,7 @@ const Login = () => {
         />
       </Link>
       <div className='login__container'>
-        <h1>Sing-In</h1>
+        <h1>Sign-In</h1>
         <form>
           <h5>E-mail</h5>
           <input type='email' />
@@ -20,7 +22,7 @@ const Login = () => {
           <h5>Password</h5>
           <input type='password' />
 
-          <button className='login__singInButton'>Sing In</button>
+          <button className='login__signInButton'>Sign In</button>
         </form>
 
         <p>
