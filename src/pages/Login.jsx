@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/login.css';
 
 // TODO: add hover
 
 const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const signIn = (e) => {
+    e.preventdefault();
+  };
+
+  const register = (e) => {
+    e.preventdefault();
+  };
+
   return (
     <div className='login'>
       <Link to='/'>
@@ -17,12 +28,26 @@ const Login = () => {
         <h1>Sign-In</h1>
         <form>
           <h5>E-mail</h5>
-          <input type='email' />
+          <input
+            type='email'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
           <h5>Password</h5>
-          <input type='password' />
+          <input
+            type='password'
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
 
-          <button className='login__signInButton'>Sign In</button>
+          <button
+            type='button'
+            onClick={signIn}
+            className='login__signInButton'
+          >
+            Sign In
+          </button>
         </form>
 
         <p>
@@ -31,7 +56,7 @@ const Login = () => {
           Interest-Based Ads Notice.
         </p>
 
-        <button className='login__registerButton'>
+        <button onClick={register} className='login__registerButton'>
           Create your Amazon Account
         </button>
       </div>
