@@ -8,6 +8,7 @@ import Error from './pages/Error';
 import { useEffect } from 'react';
 import { auth } from './firebase';
 import { useGlobalContext } from './StateProvider';
+import Payment from './pages/Payment';
 
 function App() {
   const [{}, dispatch] = useGlobalContext();
@@ -32,6 +33,7 @@ function App() {
     });
   }, []);
 
+  // TODO add deliver bar check real page under header
   return (
     <Router>
       <div className='App'>
@@ -40,6 +42,8 @@ function App() {
           <Route path='/' element={<SharedLayout />}>
             <Route index element={<Home />} />
             <Route path='/checkout' element={<Checkout />} />
+            <Route path='/payment' element={<Payment />} />
+            {/* TODO add footer */}
             <Route path='*' element={<Error />} />
           </Route>
         </Routes>

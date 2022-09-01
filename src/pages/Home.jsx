@@ -2,6 +2,8 @@ import React from 'react';
 import Product from '../components/Product';
 import '../styles/home.css';
 
+//TODO add hover over products
+
 const Home = () => {
   return (
     <div className='home'>

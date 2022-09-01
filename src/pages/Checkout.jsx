@@ -6,9 +6,10 @@ import '../styles/checkout.css';
 
 // TODO refactor context for adding quantity
 // TODO add hr or css linie between products
+// TODO add animation framer or react flip move
 
 const Checkout = () => {
-  const [{ cart }, dispatch] = useGlobalContext();
+  const [{ cart, user }, dispatch] = useGlobalContext();
   return (
     <div className='checkout'>
       <div className='checkout__left'>
@@ -18,6 +19,7 @@ const Checkout = () => {
           alt=''
         />
         <div>
+          <h3>Hello, {user ? user.email : 'Guest'}</h3>
           <h2 className='checkout__title'>Your shopping cart</h2>
           {cart.map((item) => {
             return <CartItem key={item.id} {...item} />;
