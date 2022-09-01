@@ -39,7 +39,9 @@ const Payment = () => {
 
         {/* Payment section - payment adress */}
         <section className='payment__section'>
-          <div className='payment__title'></div>
+          <div className='payment__title'>
+            <h3>Payment Method</h3>
+          </div>
           <div className='payment__details'>{/* stripe */}</div>
         </section>
       </div>
