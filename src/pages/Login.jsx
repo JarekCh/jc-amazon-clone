@@ -12,7 +12,11 @@ const Login = () => {
   const [password, setPassword] = useState('');
 
   const signIn = (e) => {
-    e.preventdefault();
+    e.preventDefault();
+
+    auth.signInWithEmailAndPassword(email, password).then((auth) => {
+      navigate('/').catch((error) => alert(error.message));
+    });
   };
 
   const register = (e) => {

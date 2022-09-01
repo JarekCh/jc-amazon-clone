@@ -1,5 +1,6 @@
 export const initialState = {
   cart: [],
+  user: null,
 };
 
 // TODO: add increment and decrement single item
@@ -31,6 +32,13 @@ const reducer = (state, action) => {
     return {
       ...state,
       cart: newCart,
+    };
+  }
+
+  if (action.type === 'SET_USER') {
+    return {
+      ...state,
+      user: action.user,
     };
   }
 };

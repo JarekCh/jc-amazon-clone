@@ -4,7 +4,6 @@ import '../styles/product.css';
 
 const Product = ({ id, title, image, price, rating }) => {
   const [{ cart }, dispatch] = useGlobalContext();
-  console.log('🚀 ~ file: Product.jsx ~ line 7 ~ Product ~ cart', cart);
   const addToCart = () => {
     dispatch({
       type: 'ADD_TO_CART',
