@@ -4,6 +4,7 @@ export const initialState = {
 };
 
 // TODO: add increment and decrement single item
+// TODO: add localstorage for cart
 
 export const getCartTotal = (cart) =>
   cart?.reduce((amount, item) => item.price + amount, 0);
