@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/payment.css';
 import { useGlobalContext } from '../StateProvider';
 import CartItem from '../components/CartItem';
@@ -13,11 +13,22 @@ const Payment = () => {
   const stripe = useStripe();
   const elements = useElements();
 
+  const [succeeded, setSucceeded] = useState(false);
+  const [processing, setProcessing] = useState('');
   const [error, setError] = useState(null);
   const [disabled, setDisabled] = useState(true);
+  const [clientSecret, setClientSecret] = useState(true);
 
-  const handleSubmit = (e) => {
-    // form stripe
+  useEffect(() => {
+    const getClientSecret = async () => {};
+    getClientSecret();
+  }, [cart]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setProcessing(true);
+
+    // const payload = await stripe
   };
 
   const handleChange = (e) => {
@@ -72,7 +83,11 @@ const Payment = () => {
                   thousandSeparator={true}
                   prefix={'$'}
                 />
+                <button disabled={processing || disabled || succeeded}>
+                  <span>{processing ? <p>Processing</p> : 'Buy Now'} </span>
+                </button>
               </div>
+              {error && <div>{error}</div>}
             </form>
           </div>
         </section>
