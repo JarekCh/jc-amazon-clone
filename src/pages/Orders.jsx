@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../styles/orders.css';
 import { db } from '../firebase';
 import { useGlobalContext } from '../StateProvider';
+import Order from '../components/Order';
 
 const Orders = () => {
   const [{ cart, user }, dispatch] = useGlobalContext();
@@ -31,7 +32,11 @@ const Orders = () => {
     <div className='orders'>
       <h1>Your Orders</h1>
 
-      <div className='orders__order'></div>
+      <div className='orders__order'>
+        {orders?.map((order) => (
+          <Order order={order} />
+        ))}
+      </div>
     </div>
   );
 };
