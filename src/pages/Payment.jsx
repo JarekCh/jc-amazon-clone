@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 import '../styles/payment.css';
 import { useGlobalContext } from '../StateProvider';
 import CartItem from '../components/CartItem';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
 import { getCartTotal } from '../reducer';
+import axios from '../api/axios';
 
 const Payment = () => {
   const [{ cart, user }, dispatch] = useGlobalContext();
+  const navigate = useNavigate();
 
   const stripe = useStripe();
   const elements = useElements();
@@ -20,15 +22,36 @@ const Payment = () => {
   const [clientSecret, setClientSecret] = useState(true);
 
   useEffect(() => {
-    const getClientSecret = async () => {};
+    const getClientSecret = async () => {
+      const response = await axios({
+        method: 'post',
+        url: `/payments/create?total=${getCartTotal(cart) * 100}`,
+      });
+      setClientSecret(response.data.clientSecret);
+    };
+
     getClientSecret();
   }, [cart]);
+
+  console.log('the secret is >>>', clientSecret);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setProcessing(true);
 
-    // const payload = await stripe
+    const payload = await stripe
+      .confirmCardPayment(clientSecret, {
+        payment_method: {
+          card: elements.getElement(CardElement),
+        },
+      })
+      .then(({ paymentIntent }) => {
+        setSucceeded(true);
+        setError(null);
+        setProcessing(false);
+
+        navigate('/orders', { replace: true });
+      });
   };
 
   const handleChange = (e) => {
@@ -84,7 +107,7 @@ const Payment = () => {
                   prefix={'$'}
                 />
                 <button disabled={processing || disabled || succeeded}>
-                  <span>{processing ? <p>Processing</p> : 'Buy Now'} </span>
+                  <span>{processing ? <p>Processing..</p> : 'Buy Now'} </span>
                 </button>
               </div>
               {error && <div>{error}</div>}

@@ -48,7 +48,6 @@ function App() {
           <Route path='/' element={<SharedLayout />}>
             <Route index element={<Home />} />
             <Route path='/checkout' element={<Checkout />} />
-
             <Route
               path='/payment'
               element={
