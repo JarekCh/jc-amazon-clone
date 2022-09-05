@@ -6,22 +6,26 @@ import CartItem from '../components/CartItem';
 
 function Order({ order }) {
   const { data } = order;
+  console.log('🚀 ~ file: Order.jsx ~ line 9 ~ Order ~ data', data);
   return (
     <div className='order'>
       <h2>Order</h2>
-      <p>{moment.unix(order.data.created).format('MMMM Do YYYY, h:mma')}</p>
+      <p>{moment.unix(data.created).format('MMMM Do YYYY, h:mma')}</p>
       <p className='order__id'>
         <small>{order.id}</small>
       </p>
-      {data.basket?.map((item) => {
+      {data.cart?.map((item) => {
         const { id, title, image, price, rating } = item;
-        <CartItem
-          id={id}
-          title={title}
-          image={image}
-          price={price}
-          rating={rating}
-        />;
+        return (
+          <CartItem
+            id={id}
+            title={title}
+            image={image}
+            price={price}
+            rating={rating}
+            hideButton
+          />
+        );
       })}
       <CurrencyFormat
         renderText={(value) => (
