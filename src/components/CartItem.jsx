@@ -4,7 +4,7 @@ import '../styles/cartItem.css';
 
 // TODO: add hover on buttons
 
-const CartItem = ({ id, image, title, price, rating }) => {
+const CartItem = ({ id, image, title, price, rating, hideButton }) => {
   const [{ cart }, dispatch] = useGlobalContext();
   const removeFromCart = () => {
     dispatch({
@@ -30,7 +30,9 @@ const CartItem = ({ id, image, title, price, rating }) => {
               ))}
           </p>
         </p>
-        <button onClick={removeFromCart}>Remove from cart</button>
+        {!hideButton && (
+          <button onClick={removeFromCart}>Remove from cart</button>
+        )}
       </div>
     </div>
   );

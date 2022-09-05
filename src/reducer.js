@@ -18,6 +18,13 @@ const reducer = (state, action) => {
     };
   }
 
+  if (action.type === 'EMPTY_BASKET') {
+    return {
+      ...state,
+      cart: [],
+    };
+  }
+
   if (action.type === 'REMOVE_FROM_CART') {
     const index = state.cart.findIndex((cartItem) => cartItem.id === action.id);
     let newCart = [...state.cart];

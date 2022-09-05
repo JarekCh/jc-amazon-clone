@@ -7,6 +7,7 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
 import { getCartTotal } from '../reducer';
 import axios from '../api/axios';
+import { db } from '../firebase';
 
 const Payment = () => {
   const [{ cart, user }, dispatch] = useGlobalContext();
@@ -46,9 +47,23 @@ const Payment = () => {
         },
       })
       .then(({ paymentIntent }) => {
+        db.collection('users')
+          .doc(user?.uid)
+          .collection('orders')
+          .doc(paymentIntent.id)
+          .set({
+            cart: cart,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created,
+          });
+
         setSucceeded(true);
         setError(null);
         setProcessing(false);
+
+        dispatch({
+          type: 'EMPTY_BASKET',
+        });
 
         navigate('/orders', { replace: true });
       });

@@ -35,10 +35,6 @@
   max-width: 400px;
 }
 
-.payment__details > h3 {
-  padding-bottom: 20px;
-}
-
 .payment__details > form > div > button {
   background: #f0c14b;
   border-radius: 2px;

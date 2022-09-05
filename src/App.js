@@ -11,6 +11,7 @@ import { useGlobalContext } from './StateProvider';
 import Payment from './pages/Payment';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
+import Orders from './pages/Orders';
 
 const promise = loadStripe(
   'pk_test_51LdNIFBb4EuDLhAXoAvp9zeaPUOcnq9lPEPkzKMVFld1J93rfxBDilPqnmogOmxjfPtPzedOflN6P8OW2ZMHE3He00egd6wycm'
@@ -48,6 +49,7 @@ function App() {
           <Route path='/' element={<SharedLayout />}>
             <Route index element={<Home />} />
             <Route path='/checkout' element={<Checkout />} />
+            <Route path='/orders' element={<Orders />} />
             <Route
               path='/payment'
               element={
