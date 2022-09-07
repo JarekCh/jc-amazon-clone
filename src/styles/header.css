@@ -42,11 +42,15 @@
   cursor: pointer;
 }
 
+.header__searchIcon:hover {
+  background-color: #bb7315;
+}
+
 .header__nav {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: 30px;
+  height: 40px;
   width: 250px;
 }
 
@@ -73,6 +77,11 @@
   color: white;
   margin: 0 10px 0 10px;
   width: 25px;
+}
+
+.header__optionCart > span {
+  color: #cd9042;
+  font-size: 12px;
 }
 
 .header__option:hover,

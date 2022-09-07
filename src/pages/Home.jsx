@@ -3,6 +3,7 @@ import Product from '../components/Product';
 import '../styles/home.css';
 
 //TODO add hover over products
+///TODO add slider with pictures and arrows
 
 const Home = () => {
   return (
