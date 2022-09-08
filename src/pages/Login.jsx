@@ -1,4 +1,3 @@
-import userEvent from '@testing-library/user-event';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { auth } from '../firebase';
@@ -23,8 +22,6 @@ const Login = () => {
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((auth) => {
-        console.log(auth);
-
         if (auth) {
           navigate('/');
         }
@@ -37,6 +34,7 @@ const Login = () => {
       <Link to='/'>
         <img
           src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png'
+          alt='amazon logo'
           className='login__logo'
         />
       </Link>

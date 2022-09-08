@@ -6,7 +6,6 @@ import CartItem from '../components/CartItem';
 
 function Order({ order }) {
   const { data } = order;
-  console.log('🚀 ~ file: Order.jsx ~ line 9 ~ Order ~ data', data);
   return (
     <div className='order'>
       <h2>Order</h2>

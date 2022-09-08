@@ -51,13 +51,16 @@
   width: 100%;
   height: 30px;
   border: 1px solid;
-  margin-top: 10px;
   cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+  transition: all 0.3s linear;
 }
 
 .login__signInButton {
   background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
   border-color: #a88734 #9c7e31 #846a29;
+  transition: all 0.3s linear;
 }
 
 .login__signInButton:hover {

@@ -34,8 +34,6 @@ const Payment = () => {
     getClientSecret();
   }, [cart]);
 
-  console.log('the secret is >>>', clientSecret);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setProcessing(true);

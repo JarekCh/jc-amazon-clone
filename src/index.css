@@ -1,3 +1,17 @@
+/*
+=============== 
+Variables
+===============
+*/
+/* :root {
+  --btn-orange: #f0c14b;
+  --btn-orange-border: #a88734 #9c7e31 #846a29;
+  --btn-orange-hover: #e6b230;
+  --transition: all 0.3s linear;
+} */
+
+/* global css */
+
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +28,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* .globalOrange__btn {
+  background: var(--btn-orange);
+  border: var(--btn-orange-border);
+  border-radius: 8px;
+  cursor: pointer;
+  color: #111;
+  box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
 }
+
+.globalOrange__btn:hover {
+  background: var(--btn-orange-hover);
+  transition: var(--transition);
+} */

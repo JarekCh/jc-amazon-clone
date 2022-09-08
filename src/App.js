@@ -1,4 +1,3 @@
-import './App.css';
 import Home from './pages/Home';
 import Checkout from './pages/Checkout';
 import Login from './pages/Login';
@@ -22,10 +21,6 @@ function App() {
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
-      console.log(
-        '🚀 ~ file: App.js ~ line 17 ~ auth.onAuthStateChanged ~ authUser',
-        authUser
-      );
       if (authUser) {
         dispatch({
           type: 'SET_USER',
@@ -40,7 +35,9 @@ function App() {
     });
   }, []);
 
-  // TODO add deliver bar check real page under header
+  // TODO add menu bar under header
+  // TODO add sidebar right cart
+  //TODO add edit profile
   return (
     <Router>
       <div className='App'>

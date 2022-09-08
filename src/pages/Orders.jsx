@@ -5,9 +5,8 @@ import { useGlobalContext } from '../StateProvider';
 import Order from '../components/Order';
 
 const Orders = () => {
-  const [{ cart, user }, dispatch] = useGlobalContext();
+  const [{ user }, dispatch] = useGlobalContext();
   const [orders, setOrders] = useState([]);
-  console.log('🚀 ~ file: Orders.jsx ~ line 9 ~ Orders ~ setOrders', orders);
 
   useEffect(() => {
     if (user) {

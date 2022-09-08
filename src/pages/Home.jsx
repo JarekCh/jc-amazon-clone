@@ -2,8 +2,7 @@ import React from 'react';
 import Product from '../components/Product';
 import '../styles/home.css';
 
-//TODO add hover over products
-///TODO add slider with pictures and arrows
+///TODO add slider with additional topics
 
 const Home = () => {
   return (
