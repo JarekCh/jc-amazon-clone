@@ -20,13 +20,13 @@ const CartItem = ({ id, image, title, price, rating, hideButton }) => {
         <p className='cartItem__price'>
           <small>$</small>
           <strong>{price}</strong>
-          <p className='cartItem__rating'>
+          <span className='cartItem__rating'>
             {Array(rating)
               .fill()
               .map((_, i) => (
-                <p>🌟</p>
+                <span>🌟</span>
               ))}
-          </p>
+          </span>
         </p>
         {!hideButton && (
           <button className='globalOrange__btn' onClick={removeFromCart}>

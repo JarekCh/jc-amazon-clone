@@ -14,7 +14,7 @@ Important note:
 - HTML
 - CSS (BEM convention)
 - JS
-- React
+- React (Context API)
 - React Icons
 - React Router
 - Firebase
