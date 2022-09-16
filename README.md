@@ -23,7 +23,7 @@ https://jc--clone-5b94a.web.app/
 
 #### Features:
 
-- [Logging in/Signing In](#Logging in)
+- [Logging in/Signing In](#Logging-in)
 - [Logginig off/Main page](#getting-started-with-markdown)
 - [Cart](#getting-started-with-markdown)
 - [Payments process](#getting-started-with-markdown)
