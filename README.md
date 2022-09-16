@@ -1,6 +1,5 @@
 # Amazon Clone
 
-Amazon clone. MVP version, more incomming.
 Clone of world popular auctions service, functionality is limited to features.
 Site is made only for practice purpose.
 
