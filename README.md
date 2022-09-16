@@ -1,9 +1,14 @@
 # Amazon Clone
 
 Amazon clone. MVP version, more incomming.
-Working features logginig in, signing In, log off, payments via stripe, cart, payment process, orders history.
+Clone of world popular auctions service, functionality is limited to features.
+Site is made only for practice purpose.
 
-Clone of world popular auctions service
+Important note:
+
+- MVP version
+- more incomming
+- !!! Site is not real, there is no way to buy anything.!!!
 
 ## Technologies:
 
@@ -17,18 +22,55 @@ Clone of world popular auctions service
 - Moment.js
 - Axios
 
-### Live:
+## Live:
 
 https://jc--clone-5b94a.web.app/
 
-#### Features:
+## Setup
 
-- [Logging in/Signing In](#Logging-in)
-- [Logginig off/Main page](#getting-started-with-markdown)
-- [Cart](#getting-started-with-markdown)
-- [Payments process](#getting-started-with-markdown)
-- [Orders History](#getting-started-with-markdown)
+To run this project, install it locally using npm:
 
-##### Logging in
+```
+$ cd ../jc-amazon-clone
+$ npm install
+$ npm start
+```
+
+## Features:
+
+- [Logging in/Signing In](#Logging-In)
+- [Logginig off/Main page](#Main-Page)
+- [Cart](#Cart)
+- [Payments](#Payments)
+- [Orders History](#Orders-History)
+
+### Logging In
+
+Log in or sign in via logging page.
 
 ![myImage](./src/assets/readme_img/login.png)
+
+### Main Page
+
+Possibility to add products to cart and log off(right to search bar).
+
+![myImage](./src/assets/readme_img/main.png)
+
+### Cart
+
+Possibility to check contents of a cart, remove item, subtotal price and proceed to checkout page.
+
+![myImage](./src/assets/readme_img/cart.png)
+
+### Payments
+
+Possibility to remove item and finalize payment.
+To pass through payment fill VISA input field as image shown.
+
+![myImage](./src/assets/readme_img/checkout.png)
+
+### Orders History
+
+Only for logged people possibility to check orders history, id of order, date and purchased items.
+
+![myImage](./src/assets/readme_img/checkout.png)
