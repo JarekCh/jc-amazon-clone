@@ -22,3 +22,5 @@ const db = firebaseApp.firestore();
 const auth = firebase.auth();
 
 export { db, auth };
+
+// TODO install firbase 9 and refactor code

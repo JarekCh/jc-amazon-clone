@@ -1,10 +1,7 @@
-import userEvent from '@testing-library/user-event';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { auth } from '../firebase';
 import '../styles/login.css';
-
-// TODO: add hover
 
 const Login = () => {
   const navigate = useNavigate();
@@ -25,8 +22,6 @@ const Login = () => {
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((auth) => {
-        console.log(auth);
-
         if (auth) {
           navigate('/');
         }
@@ -39,6 +34,7 @@ const Login = () => {
       <Link to='/'>
         <img
           src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png'
+          alt='amazon logo'
           className='login__logo'
         />
       </Link>
@@ -77,6 +73,11 @@ const Login = () => {
         <button onClick={register} className='login__registerButton'>
           Create your Amazon Account
         </button>
+      </div>
+      <div className='login__info'>
+        <div>Use test account or create new one.</div>
+        <div>Login : abc@gmail.com </div>
+        <div>Password : 123456</div>
       </div>
     </div>
   );

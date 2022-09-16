@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Amazon Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Amazon clone. MVP version, more incomming.
+Clone of world popular auctions service, functionality is limited to features.
+Site is made only for practice purpose.
 
-## Available Scripts
+Important note:
 
-In the project directory, you can run:
+- MVP version
+- more incomming
+- !!! Site is not real, there is no way to buy anything.!!!
 
-### `npm start`
+## Technologies:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- HTML
+- CSS (BEM convention)
+- JS
+- React
+- React Icons
+- React Router
+- Firebase
+- Moment.js
+- Axios
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Live:
 
-### `npm test`
+https://jc--clone-5b94a.web.app/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup
 
-### `npm run build`
+To run this project, install it locally using npm:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+$ cd ../jc-amazon-clone
+$ npm install
+$ npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Logging in/Signing In](#Logging-In)
+- [Logginig off/Main page](#Main-Page)
+- [Cart](#Cart)
+- [Payments](#Payments)
+- [Orders History](#Orders-History)
 
-### `npm run eject`
+### Logging In
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Log in or sign in via logging page.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![myImage](./src/assets/readme_img/login.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Main Page
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Possibility to add products to cart and log off(right to search bar).
 
-## Learn More
+![myImage](./src/assets/readme_img/main.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Cart
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Possibility to check contents of a cart, remove item, subtotal price and proceed to checkout page.
 
-### Code Splitting
+![myImage](./src/assets/readme_img/cart.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Payments
 
-### Analyzing the Bundle Size
+Possibility to remove item and finalize payment.
+To pass through payment fill VISA input field as image shown.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![myImage](./src/assets/readme_img/checkout.png)
 
-### Making a Progressive Web App
+### Orders History
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Only for logged people possibility to check orders history, id of order, date and purchased items.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![myImage](./src/assets/readme_img/checkout.png)

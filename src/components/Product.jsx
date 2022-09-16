@@ -2,8 +2,10 @@ import React from 'react';
 import { useGlobalContext } from '../StateProvider';
 import '../styles/product.css';
 
+// todo add hover on product card
+
 const Product = ({ id, title, image, price, rating }) => {
-  const [{ cart }, dispatch] = useGlobalContext();
+  const [{}, dispatch] = useGlobalContext();
   const addToCart = () => {
     dispatch({
       type: 'ADD_TO_CART',

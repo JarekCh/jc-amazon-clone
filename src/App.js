@@ -1,4 +1,3 @@
-import './App.css';
 import Home from './pages/Home';
 import Checkout from './pages/Checkout';
 import Login from './pages/Login';
@@ -22,10 +21,6 @@ function App() {
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
-      console.log(
-        '🚀 ~ file: App.js ~ line 17 ~ auth.onAuthStateChanged ~ authUser',
-        authUser
-      );
       if (authUser) {
         dispatch({
           type: 'SET_USER',
@@ -40,7 +35,20 @@ function App() {
     });
   }, []);
 
-  // TODO add deliver bar check real page under header
+  // TODO
+  // add menu bar under header
+  // add sidebar right cart
+  // add edit profile
+  // add multiple context and reducers
+  // refactor file structure
+  // router protected route for history
+  // profile with editable deta
+  // ccs refactor globals variable and classes
+  // create separate files for axios
+  // make RWD
+  // add in * 62.5% for rem, refactor css
+  // TODO
+
   return (
     <Router>
       <div className='App'>

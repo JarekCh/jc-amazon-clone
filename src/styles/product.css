@@ -10,11 +10,16 @@
   min-width: 100px;
   background-color: white;
   z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.product:hover {
+  scale: 1.01;
+  transition: all 0.3s ease-in-out;
 }
 
 .product__rating {
   display: flex;
-  color: rgb(221, 221, 15);
+  color: rgb(223, 191, 14);
 }
 
 .product > img {
@@ -35,12 +40,15 @@
 
 .product > button {
   background: #f0c14b;
+  border-radius: 8px;
   border: 1px solid;
-  margin-top: 10px;
   border-color: #a88734 #9c7e31 #846a29;
-  color: #111;
-  padding: 0 5px 0 5px;
   cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+  color: #111;
+  margin-top: 10px;
+  padding: 2px 8px 2px 8px;
+  transition: all 0.3s ease-in;
 }
 
 .product > button:hover {
