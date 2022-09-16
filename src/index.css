@@ -28,6 +28,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a:-webkit-any-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* .globalOrange__btn {
   background: var(--btn-orange);
   border: var(--btn-orange-border);

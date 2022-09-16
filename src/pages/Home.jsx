@@ -21,7 +21,7 @@ const Home = () => {
             }
             price={29.99}
             image={
-              'https://m.media-amazon.com/images/I/51CTIr1bJxL._AC_SY1000_.jpg'
+              'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2022/7/pr_2022_7_7_15_39_40_549_01.jpg'
             }
             rating={5}
           />
@@ -31,9 +31,9 @@ const Home = () => {
             title={
               'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid error blanditiis molestiae cupiditate ad unde ab facere ipsa illum tempore!'
             }
-            price={29.99}
+            price={150}
             image={
-              'https://m.media-amazon.com/images/I/51CTIr1bJxL._AC_SY1000_.jpg'
+              'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2022/7/pr_2022_7_7_15_39_40_549_01.jpg'
             }
             rating={3}
           />
@@ -44,9 +44,9 @@ const Home = () => {
             title={
               'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid error blanditiis molestiae cupiditate ad unde ab facere ipsa illum tempore!'
             }
-            price={29.99}
+            price={99.99}
             image={
-              'https://m.media-amazon.com/images/I/51CTIr1bJxL._AC_SY1000_.jpg'
+              'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2022/7/pr_2022_7_7_15_39_40_549_01.jpg'
             }
             rating={3}
           />
@@ -55,9 +55,9 @@ const Home = () => {
             title={
               'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid error blanditiis molestiae cupiditate ad unde ab facere ipsa illum tempore!'
             }
-            price={29.99}
+            price={50.89}
             image={
-              'https://m.media-amazon.com/images/I/51CTIr1bJxL._AC_SY1000_.jpg'
+              'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2022/7/pr_2022_7_7_15_39_40_549_01.jpg'
             }
             rating={3}
           />
@@ -66,9 +66,9 @@ const Home = () => {
             title={
               'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid error blanditiis molestiae cupiditate ad unde ab facere ipsa illum tempore!'
             }
-            price={29.99}
+            price={65}
             image={
-              'https://m.media-amazon.com/images/I/51CTIr1bJxL._AC_SY1000_.jpg'
+              'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2022/7/pr_2022_7_7_15_39_40_549_01.jpg'
             }
             rating={3}
           />
@@ -79,9 +79,9 @@ const Home = () => {
             title={
               'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid error blanditiis molestiae cupiditate ad unde ab facere ipsa illum tempore!'
             }
-            price={29.99}
+            price={69.99}
             image={
-              'https://m.media-amazon.com/images/I/51CTIr1bJxL._AC_SY1000_.jpg'
+              'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2022/7/pr_2022_7_7_15_39_40_549_01.jpg'
             }
             rating={3}
           />

@@ -74,6 +74,11 @@ const Login = () => {
           Create your Amazon Account
         </button>
       </div>
+      <div className='login__info'>
+        <div>Use test account or create new one.</div>
+        <div>Login : abc@gmail.com </div>
+        <div>Password : 123456</div>
+      </div>
     </div>
   );
 };

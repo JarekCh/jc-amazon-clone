@@ -35,9 +35,20 @@ function App() {
     });
   }, []);
 
-  // TODO add menu bar under header
-  // TODO add sidebar right cart
-  //TODO add edit profile
+  // TODO
+  // add menu bar under header
+  // add sidebar right cart
+  // add edit profile
+  // add multiple context and reducers
+  // refactor file structure
+  // router protected route for history
+  // profile with editable deta
+  // ccs refactor globals variable and classes
+  // create separate files for axios
+  // make RWD
+  // add in * 62.5% for rem, refactor css
+  // TODO
+
   return (
     <Router>
       <div className='App'>
